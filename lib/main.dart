@@ -1,5 +1,6 @@
 import 'package:appbloccubit/cubit/internet_cubit.dart';
 import 'package:appbloccubit/presentation/router/app_router.dart';
+import 'package:appbloccubit/presentation/screens/calculator_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -54,7 +55,8 @@ class _MyAppState extends State<MyApp> {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        onGenerateRoute: _appRouter.onGenerateRoute,
+       onGenerateRoute: _appRouter.onGenerateRoute,
+        // home: Calculator(),
         //home: const MyHomePage(title: "Demo MyHomePage",),
        /* home: BlocProvider<CounterCubit>(
           create: (context) => _countercubit  ,

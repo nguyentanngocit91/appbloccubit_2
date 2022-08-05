@@ -95,6 +95,26 @@ class _HomeScreenState extends State<HomeScreen> {
           Navigator.of(context).pushNamed("/third"),
 
          },),
+        
+        Padding(padding: EdgeInsets.all(10)),
+        
+        MaterialButton(
+         padding:EdgeInsets.all(20),
+         color: Colors.amber,
+         onPressed: () => Navigator.of(context).pushNamed("/secondScreen"),
+         child: Text("Màn hình Sản Phẩm",style: TextStyle(color: Colors.black,decoration: TextDecoration.none,fontWeight: FontWeight.w900),),
+        ),
+
+        Padding(padding: EdgeInsets.all(10)),
+
+        MaterialButton(
+          padding: EdgeInsets.all(20),
+            color: Colors.red,
+            onPressed: () => Navigator.of(context).pushNamed("/Calculator"),
+           child: Text("Màn Hình Máy Tính",style: TextStyle(color: Colors.white,fontSize: 18,decoration:TextDecoration.none
+           ,fontWeight: FontWeight.w900),),
+        )
+        
        ],
 
       ),

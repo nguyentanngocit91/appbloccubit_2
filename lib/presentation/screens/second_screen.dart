@@ -75,11 +75,31 @@ class _SecondScreenState extends State<SecondScreen> {
                           MaterialPageRoute(builder: (_) => BlocProvider.value(value: context.read<CounterCubit>(),
                           child: const ThirdScreen(title: "Màn hình thứ 3"),
                           ),)),*/
-
                       Navigator.of(context).pushNamed("/third"),
-
-
                 }),
+
+
+
+
+
+                TextButton(
+                  onPressed:() => {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BlocProvider(create:(context)=>CounterCubit() )))
+                },
+
+                  onLongPress: () =>{
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BlocProvider(create: (context)=>CounterCubit())))
+                  },
+
+                    child:const Text("Test thử"),),
+
+                MaterialButton(onPressed: () =>{
+                  //Navigator.of(context).push(MaterialPageRoute(builder: (context) => BlocProvider(create: (context) => CounterCubit(),),))
+              //  Navigator.of(context).push(MaterialPageRoute(builder: (_) => BlocProvider.value(value: context.read<CounterCubit>()),))
+                Navigator.of(context).pushNamed("/routeName"),
+                },
+                child: const Text("Click thử"),
+                )
 
               ],
             ),

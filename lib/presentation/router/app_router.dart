@@ -1,6 +1,9 @@
 import 'package:appbloccubit/cubit/counter_cubit.dart';
+import 'package:appbloccubit/presentation/screens/calculator_screen.dart';
 import 'package:appbloccubit/presentation/screens/home_screen.dart';
+import 'package:appbloccubit/presentation/screens/pageNews_quare.dart';
 import 'package:appbloccubit/presentation/screens/second_screen.dart';
+import 'package:appbloccubit/presentation/screens/test_secondscreenone.dart';
 import 'package:appbloccubit/presentation/screens/third_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,13 +19,22 @@ class AppRouter{
         return MaterialPageRoute(builder: (_) => const HomeScreen(title: "Screen Home"),);
         break;
 
-      case "/second":
+      case "/secondScreen1":
         return MaterialPageRoute(builder: (context) => const SecondScreen(title: "Second Screen"),);
         break;
+
+      case "/PageNews_quare":
+        return MaterialPageRoute(builder: (context) => PageNews_quare(),);
+
+      case "/secondScreen":
+        return MaterialPageRoute(builder: (context) => Ex_SecondScreen(),);
 
       case "/third":
         return MaterialPageRoute(builder: (context) => const ThirdScreen(title: "Third Scree"),);
         break;
+
+      case "/Calculator":
+        return MaterialPageRoute(builder: (context) => Calculator(),);
 
       default:
         return null;
