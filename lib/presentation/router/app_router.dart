@@ -3,6 +3,8 @@ import 'package:appbloccubit/presentation/screens/calculator_screen.dart';
 import 'package:appbloccubit/presentation/screens/home_screen.dart';
 import 'package:appbloccubit/presentation/screens/pageNews_quare.dart';
 import 'package:appbloccubit/presentation/screens/second_screen.dart';
+import 'package:appbloccubit/presentation/screens/sliver_app_bar.dart';
+import 'package:appbloccubit/presentation/screens/sliver_appbar_screen.dart';
 import 'package:appbloccubit/presentation/screens/test_secondscreenone.dart';
 import 'package:appbloccubit/presentation/screens/third_screen.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +37,12 @@ class AppRouter{
 
       case "/Calculator":
         return MaterialPageRoute(builder: (context) => Calculator(),);
+
+      case "/SliverAppBar_Screen":
+        return MaterialPageRoute(builder: (context) => SliverAppBar_Screen(),);
+        
+      case "/SliverAppBar_Demo":
+        return MaterialPageRoute(builder: (context) => SliverAppBar_View(),);
 
       default:
         return null;

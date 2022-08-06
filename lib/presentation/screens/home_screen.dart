@@ -113,8 +113,25 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () => Navigator.of(context).pushNamed("/Calculator"),
            child: Text("Màn Hình Máy Tính",style: TextStyle(color: Colors.white,fontSize: 18,decoration:TextDecoration.none
            ,fontWeight: FontWeight.w900),),
-        )
+        ),
         
+        Padding(padding: EdgeInsets.all(10)),
+        
+        MaterialButton(onPressed: () => {
+         Navigator.of(context).pushNamed("/SliverAppBar_Screen"),
+        }, child: Text("Màn hình Sliver App Bar",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900,decoration: TextDecoration.none),)),
+
+
+        Padding(padding: EdgeInsets.all(10)),
+
+        MaterialButton(
+         color: Colors.amber,
+            onPressed: () => {
+             Navigator.of(context).pushNamed("/SliverAppBar_Demo"),
+            },
+        child: Text("Màn Hình Sliver Demo",style: TextStyle(color: Colors.black,decoration: TextDecoration.none,fontWeight: FontWeight.w900,fontSize: 18),),
+        )
+
        ],
 
       ),

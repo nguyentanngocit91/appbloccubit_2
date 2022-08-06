@@ -108,7 +108,7 @@ class _CalculatorState extends State<Calculator> {
                   }
                   else if (index==Buttons.length-1){
 
-                    print('${index} + ${Buttons.length}');
+                    //print('${index} + ${Buttons.length}');
 
                     return MyButtons
                       (
@@ -177,9 +177,8 @@ class _CalculatorState extends State<Calculator> {
 
   void equalPressed(){
     String finalQuestion=userQuestion;
-
     finalQuestion=finalQuestion.replaceAll("x", "*");
-    print(finalQuestion);
+   // print(finalQuestion);
     Parser parser=Parser();
     Expression expression=parser.parse(finalQuestion);
     ContextModel contextModel=ContextModel();
@@ -188,15 +187,6 @@ class _CalculatorState extends State<Calculator> {
 
   }
 
-  void equalPressed2(){
-    String finalQuestion=userQuestion;
-    finalQuestion=finalQuestion.replaceAll("X", "*");
-    Parser parser=Parser();
-    Expression expression=parser.parse(finalQuestion);
-    ContextModel contextModel=ContextModel();
-    double eval=expression.evaluate(EvaluationType.REAL, contextModel);
-    userAnswer=eval.toString();
-  }
 
 
 }
