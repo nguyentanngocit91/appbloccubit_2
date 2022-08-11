@@ -67,143 +67,179 @@ class _HomeScreenState extends State<HomeScreen> {
        ],
       ),
 
-      Column(
+      Container(
+       height: 500,
+       child:  SingleChildScrollView(
 
-       mainAxisAlignment: MainAxisAlignment.center,
-       children: [
-        MaterialButton(
-            color: Colors.blue,
-            child:const Text("Button SecondSreen"),
-            onPressed: () =>{
+        scrollDirection: Axis.vertical,
+        controller: ScrollController(),
+        child: Column(
+         crossAxisAlignment: CrossAxisAlignment.center,
+         mainAxisAlignment: MainAxisAlignment.center,
+         children: [
+
+
+          MaterialButton(
+           color: Colors.blue,
+           child:const Text("Button SecondSreen"),
+           onPressed: () =>{
             /* Navigator.of(context).push(
-                 MaterialPageRoute(
-                  builder: (_) => BlocProvider.value(
-                      value: context.read<CounterCubit>(),
-                      child: const SecondScreen(title: "Màn hình thứ 2")),
-                 ))*/
-              Navigator.of(context).pushNamed("/second"),
-            },
-        ),
+                   MaterialPageRoute(
+                    builder: (_) => BlocProvider.value(
+                        value: context.read<CounterCubit>(),
+                        child: const SecondScreen(title: "Màn hình thứ 2")),
+                   ))*/
+            Navigator.of(context).pushNamed("/second"),
+           },
+          ),
 
-        const SizedBox(height: 24,),
 
-        MaterialButton(
-         color: Colors.blue,
-         child: const Text("Button Third Sreen"),
-         onPressed: () => {
-          /*Navigator.of(context).push(MaterialPageRoute(builder: (_) => BlocProvider.value(value: context.read<CounterCubit>(),
+          const SizedBox(height: 24,),
+
+          MaterialButton(
+           color: Colors.blue,
+           child: const Text("Button Third Sreen"),
+           onPressed: () => {
+            /*Navigator.of(context).push(MaterialPageRoute(builder: (_) => BlocProvider.value(value: context.read<CounterCubit>(),
            child: const ThirdScreen(title: "Màn hình thứ 3")),)),*/
-          Navigator.of(context).pushNamed("/third"),
+            Navigator.of(context).pushNamed("/third"),
 
-         },),
-        
-        Padding(padding: EdgeInsets.all(10)),
-        
-        MaterialButton(
-         padding:EdgeInsets.all(20),
-         color: Colors.amber,
-         onPressed: () => Navigator.of(context).pushNamed("/secondScreen"),
-         child: Text("Màn hình Sản Phẩm",style: TextStyle(color: Colors.black,decoration: TextDecoration.none,fontWeight: FontWeight.w900),),
-        ),
+           },),
 
-        Padding(padding: EdgeInsets.all(10)),
+          Padding(padding: EdgeInsets.all(10)),
 
-        MaterialButton(
-          padding: EdgeInsets.all(20),
-            color: Colors.red,
-            onPressed: () => Navigator.of(context).pushNamed("/Calculator"),
+          MaterialButton(
+           padding:EdgeInsets.all(20),
+           color: Colors.amber,
+           onPressed: () => Navigator.of(context).pushNamed("/secondScreen"),
+           child: Text("Màn hình Sản Phẩm",style: TextStyle(color: Colors.black,decoration: TextDecoration.none,fontWeight: FontWeight.w900),),
+          ),
+
+          Padding(padding: EdgeInsets.all(10)),
+
+          MaterialButton(
+           padding: EdgeInsets.all(20),
+           color: Colors.red,
+           onPressed: () => Navigator.of(context).pushNamed("/Calculator"),
            child: Text("Màn Hình Máy Tính",style: TextStyle(color: Colors.white,fontSize: 18,decoration:TextDecoration.none
-           ,fontWeight: FontWeight.w900),),
+               ,fontWeight: FontWeight.w900),),
+          ),
+
+          Padding(padding: EdgeInsets.all(10)),
+
+          MaterialButton(onPressed: () => {
+           Navigator.of(context).pushNamed("/SliverAppBar_Screen"),
+          }, child: Text("Màn hình Sliver App Bar",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900,decoration: TextDecoration.none),)),
+
+
+          Padding(padding: EdgeInsets.all(10)),
+
+          MaterialButton(
+           color: Colors.amber,
+           onPressed: () => {
+            Navigator.of(context).pushNamed("/SliverAppBar_Demo"),
+           },
+           child: Text("Màn Hình Sliver Demo",style: TextStyle(color: Colors.black,decoration: TextDecoration.none,fontWeight: FontWeight.w900,fontSize: 18),),
+          ),
+
+          Padding(padding: EdgeInsets.all(10)),
+          MaterialButton(
+           onPressed: () => {
+            Navigator.of(context).pushNamed("/TabBar_Screen"),
+           },
+           color: Colors.deepPurpleAccent,
+           child: Text("Tabar Screen",style: TextStyle(color: Colors.black,decoration: TextDecoration.none,fontSize: 18,fontWeight: FontWeight.w900),),
+          ),
+
+          Padding(padding: EdgeInsets.all(10)),
+          MaterialButton(
+           color: Colors.white,
+           onPressed: () => {
+            Navigator.of(context).pushNamed("/MediaQuery_Screen"),
+           },
+           child: Text("Media Query Screen",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900,decoration: TextDecoration.none
+               ,color: Colors.deepOrange),),
+
+          ),
+
+          Padding(padding: EdgeInsets.all(10)),
+          MaterialButton(
+           color: Colors.deepPurpleAccent,
+           onPressed: () => {
+            Navigator.of(context).pushNamed("/AlertDialog_Screen"),
+           },
+           child: Text("Alert Dialog",style: TextStyle(color: Colors.white,decoration: TextDecoration.none,fontWeight: FontWeight.w900,fontSize: 18,),),
+          ),
+
+          Padding(padding: EdgeInsets.all(10)),
+          MaterialButton(
+           color: Colors.blue,
+           onPressed: () => {
+            Navigator.of(context).pushNamed("/AvatarGlow_Screen"),
+           },
+           child: Text("Avatar Glow",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900,decoration: TextDecoration.none, color: Colors.deepOrangeAccent),),
+          ),
+
+
+          Padding(padding: EdgeInsets.all(10)),
+          MaterialButton(
+           color: Colors.blue,
+           onPressed: () => {
+            Navigator.of(context).pushNamed("/Timer_Screen"),
+           },
+           child: Text("Timer Screen",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900,decoration: TextDecoration.none, color: Colors.deepOrangeAccent),),
+          ),
+
+          Padding(padding: EdgeInsets.all(10)),
+
+          MaterialButton(onPressed: () => {
+           Navigator.of(context).pushNamed("/PageView_Scroll_Tiktok"),
+          },
+           color: Colors.deepOrangeAccent,
+           padding: EdgeInsets.only(left: 30,right: 30),
+           child: Text("Scroll TikTok",style: GoogleFonts.roboto(fontWeight: FontWeight.bold,fontSize: 20),),
+          ),
+
+          Padding(padding: EdgeInsets.all(10)),
+
+          MaterialButton(onPressed: () => {
+           Navigator.of(context).pushNamed("/Liquid_Pull_Refresh"),
+
+          },
+           color: Colors.blue,
+           child: Text("Liquid_Pull_Refresh",style: GoogleFonts.roboto(fontSize: 20,fontWeight: FontWeight.bold),),
+          ),
+
+          Padding(padding: EdgeInsets.all(10)),
+
+          MaterialButton(onPressed: () => {
+           Navigator.of(context).pushNamed("/Stack_Input_Post"),
+          },
+           color: Colors.red,
+           child: Text("Stack_Input_Post",style: GoogleFonts.roboto(fontWeight: FontWeight.bold,fontSize: 20),
+           ),),
+
+          Padding(padding: EdgeInsets.all(10)),
+          MaterialButton(onPressed: () => {
+           Navigator.of(context).pushNamed("/Animation_Controller_Slide_Simple"),
+          },
+           color: Colors.deepPurple,
+           padding: EdgeInsets.all(15),
+           child: Text("Animation_Controller_Slide_Simple",style: GoogleFonts.roboto(fontWeight: FontWeight.bold,fontSize: 20),),
+          ),
+
+
+
+         ],
         ),
-        
-        Padding(padding: EdgeInsets.all(10)),
-        
-        MaterialButton(onPressed: () => {
-         Navigator.of(context).pushNamed("/SliverAppBar_Screen"),
-        }, child: Text("Màn hình Sliver App Bar",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900,decoration: TextDecoration.none),)),
 
 
-        Padding(padding: EdgeInsets.all(10)),
 
-        MaterialButton(
-         color: Colors.amber,
-            onPressed: () => {
-             Navigator.of(context).pushNamed("/SliverAppBar_Demo"),
-            },
-        child: Text("Màn Hình Sliver Demo",style: TextStyle(color: Colors.black,decoration: TextDecoration.none,fontWeight: FontWeight.w900,fontSize: 18),),
-        ),
-        
-        Padding(padding: EdgeInsets.all(10)),
-        MaterialButton(
-         onPressed: () => {
-         Navigator.of(context).pushNamed("/TabBar_Screen"),
-        },
-        color: Colors.deepPurpleAccent,
-         child: Text("Tabar Screen",style: TextStyle(color: Colors.black,decoration: TextDecoration.none,fontSize: 18,fontWeight: FontWeight.w900),),
-        ),
+       ),
 
-        Padding(padding: EdgeInsets.all(10)),
-        MaterialButton(
-         color: Colors.white,
-         onPressed: () => {
-          Navigator.of(context).pushNamed("/MediaQuery_Screen"),
-         },
-         child: Text("Media Query Screen",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900,decoration: TextDecoration.none
-         ,color: Colors.deepOrange),),
-
-        ),
-
-        Padding(padding: EdgeInsets.all(10)),
-        MaterialButton(
-         color: Colors.deepPurpleAccent,
-         onPressed: () => {
-          Navigator.of(context).pushNamed("/AlertDialog_Screen"),
-         },
-        child: Text("Alert Dialog",style: TextStyle(color: Colors.white,decoration: TextDecoration.none,fontWeight: FontWeight.w900,fontSize: 18,),),
-        ),
-
-        Padding(padding: EdgeInsets.all(10)),
-        MaterialButton(
-         color: Colors.blue,
-         onPressed: () => {
-         Navigator.of(context).pushNamed("/AvatarGlow_Screen"),
-        },
-        child: Text("Avatar Glow",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900,decoration: TextDecoration.none, color: Colors.deepOrangeAccent),),
-        ),
-
-
-        Padding(padding: EdgeInsets.all(10)),
-        MaterialButton(
-         color: Colors.blue,
-         onPressed: () => {
-          Navigator.of(context).pushNamed("/Timer_Screen"),
-         },
-         child: Text("Timer Screen",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900,decoration: TextDecoration.none, color: Colors.deepOrangeAccent),),
-        ),
-
-        Padding(padding: EdgeInsets.all(10)),
-
-        MaterialButton(onPressed: () => {
-         Navigator.of(context).pushNamed("/PageView_Scroll_Tiktok"),
-        },
-         color: Colors.deepOrangeAccent,
-         padding: EdgeInsets.only(left: 30,right: 30),
-        child: Text("Scroll TikTok",style: GoogleFonts.roboto(fontWeight: FontWeight.bold,fontSize: 20),),
-        ),
-        
-        Padding(padding: EdgeInsets.all(10)),
-        
-        MaterialButton(onPressed: () => {
-         Navigator.of(context).pushNamed("/Liquid_Pull_Refresh"),
-
-        },
-        color: Colors.blue,
-        child: Text("Liquid_Pull_Refresh",style: GoogleFonts.roboto(fontSize: 20,fontWeight: FontWeight.bold),),
-        )
-
-       ],
 
       ),
+
 
 
      ],

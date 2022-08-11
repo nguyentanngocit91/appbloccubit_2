@@ -9,6 +9,7 @@ import 'package:appbloccubit/presentation/screens/pageview_scroll_tiktok.dart';
 import 'package:appbloccubit/presentation/screens/second_screen.dart';
 import 'package:appbloccubit/presentation/screens/sliver_app_bar.dart';
 import 'package:appbloccubit/presentation/screens/sliver_appbar_screen.dart';
+import 'package:appbloccubit/presentation/screens/stack_input.dart';
 import 'package:appbloccubit/presentation/screens/tabbar_screen.dart';
 import 'package:appbloccubit/presentation/screens/test_secondscreenone.dart';
 import 'package:appbloccubit/presentation/screens/third_screen.dart';
@@ -17,6 +18,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../screens/animation_slider_simple.dart';
 import '../screens/mediaquery_screen.dart';
 
 class AppRouter{
@@ -72,6 +74,12 @@ class AppRouter{
 
       case "/Liquid_Pull_Refresh":
         return MaterialPageRoute(builder: (context) => Liquid_Pull_Refresh(),);
+
+      case "/Stack_Input_Post":
+        return MaterialPageRoute(builder: (context) => Stack_Input_Post(),);
+
+      case "/Animation_Controller_Slide_Simple":
+        return MaterialPageRoute(builder: (context) => Animation_Controller_Slide_Simple(),);
 
 
       default:
