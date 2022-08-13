@@ -42,6 +42,12 @@ dependencies:
   avatar_glow: ^2.0.2
   google_fonts: ^3.0.1
   liquid_pull_to_refresh: ^3.0.1
+  percent_indicator: ^4.0.1
+  flutter_carousel_slider: ^1.0.8
+  flutter_calendar_carousel: ^2.4.0
+  smooth_page_indicator: ^1.0.0+2
+
+
 
 
 
